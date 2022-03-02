@@ -7,50 +7,49 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" aria-label="Eighth navbar example">
+    <nav class="navbar navbar-light navbar-expand-md bg-light">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <i class="bi bi-book-fill"></i>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07"
-                aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+          <div class="d-flex">
+            <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+              <span class="navbar-toggler-icon"></span>
             </button>
-
-            <div class="collapse navbar-collapse" id="navbarsExample07">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Disabled</a>
-                    </li>
-
-                </ul>
-                <form>
-                    <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-                </form>
-                <div class="dropdown">
-                    <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton1"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item" href="#">Perfil</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
-                    </ul>
-                </div>
+            <a class="navbar-brand" href="#"><i class="bi bi-apple"></i> CoursesPage</a>
+          </div>
+    
+    
+          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
+            <div class="offcanvas-body py-0">
+              <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#features">Detalles</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#pricing">Precio</a>
+                </li>
+              </ul>
+              <ul class="navbar-nav align-items-center">
+                <li class="nav-item">
+                  <a class="btn btn-outline-primary me-3 mb-xs-3" data-bs-toggle="modal" data-bs-target="#modalInicioSesion"
+                    aria-current="page" href="/sign-in">Iniciar sesión</a>
+                </li>
+                <li class="nav-item">
+                  <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalRegistro" aria-current="page"
+                    href="/sign-up">Registrarse</a>
+                </li>
+    
+              </ul>
+            </div>
+          </div>
         </div>
-    </nav>
+      </nav>
 
 
     <div class="container-fluid p-5 bg-light">

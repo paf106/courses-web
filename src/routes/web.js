@@ -6,9 +6,9 @@ const router = express.Router();
 router.get('/', webController.inicio);
 
 // Página inicial
-router.get('/sign-in', webController.inicio);
+router.get('/sign-in', webController.signIn);
 
 // Página inicial
-router.get('/sign-up', webController.inicio);
+router.get('/sign-up', webController.signUp);
 
 module.exports = router;

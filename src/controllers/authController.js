@@ -5,8 +5,8 @@ const Alerta = require('../Alerta');
 
 /**
  * Genera un token y lo almacena en una cookie con el nombre "jwt"
- * @param {*} obj Objeto para firmar el token
- * @param {*} res response usada para almacenar la cookie en el navegador
+ * @param obj Objeto para firmar el token
+ * @param res response usada para almacenar la cookie en el navegador
  */
 function generateToken(obj, res) {
     const token = jwt.sign({ id: obj }, process.env.JWT_KEY, {

@@ -7,23 +7,23 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top">
+  <nav class="navbar navbar-light navbar-expand-md bg-light">
     <div class="container">
       <div class="d-flex">
-        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-        aria-controls="offcanvasNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" href="#"><i class="bi bi-apple"></i> CoursesPage</a>
+        <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#"><i class="bi bi-apple"></i> CoursesPage</a>
       </div>
-      
+
 
       <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
         <div class="offcanvas-header">
           <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
           <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <div class="offcanvas-body">
+        <div class="offcanvas-body py-0">
           <ul class="navbar-nav me-auto">
             <li class="nav-item">
               <a class="nav-link" href="#">Inicio</a>
@@ -35,12 +35,14 @@
               <a class="nav-link" href="#pricing">Precio</a>
             </li>
           </ul>
-          <ul class="navbar-nav">
+          <ul class="navbar-nav align-items-center">
             <li class="nav-item">
-              <a class="btn btn-outline-primary me-3 mb-xs-3" aria-current="page" href="#">Iniciar sesión</a>
+              <a class="btn btn-outline-primary me-3 mb-xs-3" data-bs-toggle="modal" data-bs-target="#modalInicioSesion"
+                aria-current="page" href="/sign-in">Iniciar sesión</a>
             </li>
             <li class="nav-item">
-              <a class="btn btn-primary" aria-current="page" href="#">Registrarse</a>
+              <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalRegistro" aria-current="page"
+                href="/sign-up">Registrarse</a>
             </li>
 
           </ul>
@@ -48,6 +50,100 @@
       </div>
     </div>
   </nav>
+
+  <!-- Modal Inicio Sesión -->
+  <div class="modal fade" id="modalInicioSesion" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content rounded-5 shadow">
+        <div class="modal-header p-4 border-bottom-0">
+          <h2 class="fw-bold mb-0">Iniciar sesión</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body p-4">
+          <form class="needs-validation" method="post" action="#" novalidate>
+
+            <!-- Email -->
+            <div class="col-sm">
+              <div class="form-floating">
+                <input type="email" class="form-control rounded-4" id="txtEmailInicioSesion" placeholder="Email" name="email"
+                  required>
+                <label for="txtEmailInicioSesion">Email</label>
+                <div class="invalid-feedback">Escribe un email válido</div>
+              </div>
+            </div>
+
+            <div class="col-sm mt-3 mb-4">
+              <!-- Password -->
+              <div class="form-floating">
+                <input type="text" class="form-control rounded-4" id="txtPasswordInicioSesion" placeholder="Password"
+                  name="password" required>
+                <label for="txtPasswordInicioSesion">Contraseña</label>
+                <div class="invalid-feedback">Introduce la contraseña</div>
+              </div>
+            </div>
+
+            <div class="col-sm">
+              <button class="mt-2 w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Entrar
+
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Registro -->
+  <div class="modal fade" id="modalRegistro" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content rounded-5 shadow">
+        <div class="modal-header p-4 border-bottom-0">
+          <h2 class="fw-bold mb-0">Crear cuenta</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body p-4">
+          <form class="needs-validation" method="post" action="#" novalidate>
+
+            <!-- Nombre -->
+            <div class="col-sm">
+              <div class="form-floating">
+                <input type="text" class="form-control rounded-4" id="txtName" placeholder="Name" name="name" required>
+                <label for="txtName">Nombre</label>
+                <div class="invalid-feedback">Introduce tu nombre</div>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="col-sm my-3">
+              <div class="form-floating">
+                <input type="email" class="form-control rounded-4" id="txtEmail" placeholder="Email" name="email"
+                  required>
+                <label for="txtEmail">Email</label>
+                <div class="invalid-feedback">Escribe un email válido</div>
+              </div>
+            </div>
+
+            <div class="col-sm mb-4">
+              <!-- Password -->
+              <div class="form-floating">
+                <input type="password" class="form-control rounded-4" id="txtPassword" placeholder="Password"
+                  name="password" required>
+                <label for="txtPassword">Contraseña</label>
+                <div class="invalid-feedback">Introduce la contraseña</div>
+              </div>
+            </div>
+
+            <div class="col-sm">
+              <button class="mt-2 w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Registrarme</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- HERO -->
   <div class="bg-dark text-secondary px-4 py-5 text-center">
     <div class="py-5">
@@ -65,7 +161,7 @@
   <!-- FEATURES -->
 
   <div class="container col-xxl-8 px-4 py-5">
-    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+    <div class="row align-items-center g-5 py-5">
       <div class="col-10 col-sm-8 col-lg-6">
         <img
           src="https://cdn.euroinnova.edu.es/img/subidasEditor/qu%C3%A9%20son%20los%20acordes%20de%20la%20guitarra-1597821526."
@@ -76,23 +172,17 @@
         <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most
           popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive
           prebuilt components, and powerful JavaScript plugins.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-
-        </div>
       </div>
     </div>
   </div>
 
   <div class="container col-xxl-8 px-4 py-5">
-    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+    <div class="row align-items-center g-5 py-5">
       <div class="col-lg-6">
         <h1 class="display-5 fw-bold lh-1 mb-3">Responsive left-aligned hero with image</h1>
         <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most
           popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive
           prebuilt components, and powerful JavaScript plugins.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-
-        </div>
       </div>
       <div class="col-10 col-sm-8 col-lg-6">
         <img src="https://www.orbitarock.com/sites/default/files/articulos_2016/afinar_guitarra_electrica.jpg"
@@ -104,7 +194,7 @@
   <!-- FIN FEATURES -->
 
   <!-- FEATURES ICON -->
-<a name="features"></a>
+  <a name="features"></a>
   <div class="container px-4 py-5" id="icon-grid">
 
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-3 py-5">
